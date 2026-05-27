@@ -96,16 +96,14 @@ function parseReferenceSheet(wb, extraColsAfterBase = []) {
       const prev = dataRows[dataRows.length - 1];
       const altContact = normalizeCell(row[companyColIdx + 6]);
       if (prev && altContact) {
-        const alternateNote = `Alternate contact: ${altContact} (${normalizeCell(row[companyColIdx + 7])}) — ${normalizeCell(row[companyColIdx + 8])}, ${normalizeCell(row[companyColIdx + 9])}`;
-        if ('additionalCmiNotes' in prev) {
-          prev.additionalCmiNotes = [prev.additionalCmiNotes, alternateNote]
-            .filter(Boolean)
-            .join(' ');
-        } else {
-          prev.designationDecisionMakerRole = [prev.designationDecisionMakerRole, alternateNote]
-            .filter(Boolean)
-            .join(' ');
-        }
+        const alternateRow = { ...prev };
+        alternateRow.keyContactPerson = altContact;
+        alternateRow.designationDecisionMakerRole = normalizeCell(row[companyColIdx + 7]);
+        alternateRow.emailAddress = normalizeCell(row[companyColIdx + 8]);
+        alternateRow.telephoneWhatsappNumber = normalizeCell(row[companyColIdx + 9]);
+        alternateRow.linkedInProfile = normalizeCell(row[companyColIdx + 10]);
+        alternateRow.website = normalizeCell(row[companyColIdx + 11]);
+        dataRows.push(alternateRow);
       }
       continue;
     }
@@ -131,9 +129,11 @@ function pickColumns(record, columns, sNo) {
   return picked;
 }
 
-function createPlaceholderRow(sNo, columns) {
+function createPlaceholderRow(sNo, columns, dataRowCount) {
   const row = { sNo: String(sNo) };
-  const label = sNo === TOTAL_ROWS ? 'Customer N' : `Customer ${sNo + 1}`;
+  const placeholderIndex = sNo - dataRowCount;
+  const label =
+    sNo === TOTAL_ROWS ? 'Customer N' : `Customer ${placeholderIndex + 4}`;
 
   for (const col of columns) {
     row[col] = col === 'customerCompanyName' ? label : 'xx';
@@ -146,7 +146,7 @@ function buildPropositionRows(fullRows, columns) {
   const rows = fullRows.map((record, idx) => pickColumns(record, columns, idx + 1));
 
   for (let sNo = rows.length + 1; sNo <= TOTAL_ROWS; sNo++) {
-    rows.push(createPlaceholderRow(sNo, columns));
+    rows.push(createPlaceholderRow(sNo, columns, fullRows.length));
   }
 
   return rows;
