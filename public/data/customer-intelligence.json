@@ -29,8 +29,8 @@
       {
         "sNo": "2",
         "customerCompanyName": "UK Power Networks (Eastern Power Networks)",
-        "businessOverview": "Distribution Network Operator (DNO) maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
-        "customerTypeAndNetworkResponsibility": "Distribution Network Operator (DNO)",
+        "businessOverview": "Electricity distribution network operator maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
+        "customerTypeAndNetworkResponsibility": "Electricity Distribution Network Operator",
         "compositePoleApplicationUseCase": "Engineered / composite-alternative pole application for 33 kilovolt distribution overhead-line networks. Public evidence supports UK Power Networks’ engineered pole trial on a 33 kilovolt line, not confirmed composite utility transmission pole purchase.",
         "annualRevenueOrNetworkBudgetSignal": "FY2025 turnover: £2,462.9 million, approximately US$3,100 million; strong regulated network capital expenditure signal.",
         "sizeOperatingScale": "Major electricity distribution network covering London, South East England, and East of England; large urban, semi-urban, and rural distribution network base.",
@@ -270,8 +270,8 @@
       {
         "sNo": "2",
         "customerCompanyName": "UK Power Networks (Eastern Power Networks)",
-        "businessOverview": "Distribution Network Operator (DNO) maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
-        "customerTypeAndNetworkResponsibility": "Distribution Network Operator (DNO)",
+        "businessOverview": "Electricity distribution network operator maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
+        "customerTypeAndNetworkResponsibility": "Electricity Distribution Network Operator",
         "compositePoleApplicationUseCase": "Engineered / composite-alternative pole application for 33 kilovolt distribution overhead-line networks. Public evidence supports UK Power Networks’ engineered pole trial on a 33 kilovolt line, not confirmed composite utility transmission pole purchase.",
         "annualRevenueOrNetworkBudgetSignal": "FY2025 turnover: £2,462.9 million, approximately US$3,100 million; strong regulated network capital expenditure signal.",
         "sizeOperatingScale": "Major electricity distribution network covering London, South East England, and East of England; large urban, semi-urban, and rural distribution network base.",
@@ -591,8 +591,8 @@
       {
         "sNo": "2",
         "customerCompanyName": "UK Power Networks (Eastern Power Networks)",
-        "businessOverview": "Distribution Network Operator (DNO) maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
-        "customerTypeAndNetworkResponsibility": "Distribution Network Operator (DNO)",
+        "businessOverview": "Electricity distribution network operator maintaining electricity networks across London, the South East, and the East of England. It operates through Eastern Power Networks, London Power Networks, and South Eastern Power Networks.",
+        "customerTypeAndNetworkResponsibility": "Electricity Distribution Network Operator",
         "compositePoleApplicationUseCase": "Engineered / composite-alternative pole application for 33 kilovolt distribution overhead-line networks. Public evidence supports UK Power Networks’ engineered pole trial on a 33 kilovolt line, not confirmed composite utility transmission pole purchase.",
         "annualRevenueOrNetworkBudgetSignal": "FY2025 turnover: £2,462.9 million, approximately US$3,100 million; strong regulated network capital expenditure signal.",
         "sizeOperatingScale": "Major electricity distribution network covering London, South East England, and East of England; large urban, semi-urban, and rural distribution network base.",
