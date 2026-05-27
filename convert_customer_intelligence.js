@@ -85,8 +85,27 @@ function parseSheet(wb, sheetName, extraColsAfterBase = []) {
     const row = rows[i];
     const sNo = row[sNoColIdx];
     const company = row[companyColIdx];
-    if (!sNo && !company) continue;
     if (String(company).trim() === 'Customer / Company Name') continue;
+
+    if (!company) {
+      const prev = dataRows[dataRows.length - 1];
+      const altContact = normalizeCell(row[companyColIdx + 6]);
+      if (prev && altContact) {
+        const alternateNote = `Alternate contact: ${altContact} (${normalizeCell(row[companyColIdx + 7])}) — ${normalizeCell(row[companyColIdx + 8])}, ${normalizeCell(row[companyColIdx + 9])}`;
+        if ('additionalCmiNotes' in prev) {
+          prev.additionalCmiNotes = [prev.additionalCmiNotes, alternateNote]
+            .filter(Boolean)
+            .join(' ');
+        } else {
+          prev.designationDecisionMakerRole = [prev.designationDecisionMakerRole, alternateNote]
+            .filter(Boolean)
+            .join(' ');
+        }
+      }
+      continue;
+    }
+
+    if (!sNo && !company) continue;
 
     const record = { sNo: normalizeCell(sNo) };
     allCols.forEach((key, idx) => {
@@ -96,6 +115,13 @@ function parseSheet(wb, sheetName, extraColsAfterBase = []) {
   }
 
   return { titleLines, rows: dataRows };
+}
+
+function postProcessRevisedProposition3Rows(rows) {
+  return rows.map((row, idx) => ({
+    ...row,
+    sNo: String(idx + 1),
+  }));
 }
 
 function main() {
@@ -119,7 +145,16 @@ function main() {
     proposition3: {
       id: 'proposition-3',
       label: 'Proposition 3 - Premium',
-      ...parseSheet(wb, 'Proposition 3 - Premium', [...PROP2_EXTRA, ...PROP3_EXTRA]),
+      ...(() => {
+        const parsed = parseSheet(wb, 'Revised Proposition 3', [
+          ...PROP2_EXTRA,
+          ...PROP3_EXTRA,
+        ]);
+        return {
+          ...parsed,
+          rows: postProcessRevisedProposition3Rows(parsed.rows),
+        };
+      })(),
     },
   };
 
