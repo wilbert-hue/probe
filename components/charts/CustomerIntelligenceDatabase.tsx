@@ -101,7 +101,10 @@ function PropositionTable({
                 colSpan={group.colSpan}
                 className={`border border-gray-300 px-3 py-2 text-center text-sm font-semibold ${group.headerClass}`}
               >
-                {group.label}
+                <div>{group.label}</div>
+                {group.subLabel ? (
+                  <div className="mt-1 text-xs font-normal leading-snug">{group.subLabel}</div>
+                ) : null}
               </th>
             ))}
           </tr>

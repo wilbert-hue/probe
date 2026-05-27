@@ -47,6 +47,7 @@ export interface CustomerIntelligenceData {
 
 export interface TableColumnGroup {
   label: string
+  subLabel?: string
   colSpan: number
   headerClass: string
 }
@@ -188,14 +189,14 @@ export const PROPOSITION_TABLE_CONFIG: Record<'proposition1' | 'proposition2' | 
   proposition1: {
     groups: [
       { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Contact Details', subLabel: '(Alternate Number can be provided if required)', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
     ],
     columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS],
   },
   proposition2: {
     groups: [
       { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Contact Details', subLabel: '(Alternate Number can be provided if required)', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
       { label: 'Buying Drivers', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
     ],
     columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...BUYING_DRIVERS_COLUMNS],
@@ -203,7 +204,7 @@ export const PROPOSITION_TABLE_CONFIG: Record<'proposition1' | 'proposition2' | 
   proposition3: {
     groups: [
       { label: 'Customer Information', colSpan: 6, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Contact Details', subLabel: '(Alternate Number can be provided if required)', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
       { label: 'Buying Drivers', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
       { label: 'Purchasing Behaviour Metrics', colSpan: 4, headerClass: 'bg-[#9370DB] text-white' },
       { label: 'Solution Requirements', colSpan: 4, headerClass: 'bg-[#D4A574]' },
