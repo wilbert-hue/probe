@@ -2,9 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
 
-const EXCEL_FILE =
-  'Sample Framework_Customer Database_U.K. Composite Utility Transmission Pole Market.xlsx';
+const REFERENCE_FILE =
+  'refer only proposition 3 of Sample Framework_Customer Database_U.K. Composite Utility Transmission Pole Market.xlsx';
+const REFERENCE_SHEET = 'Revised Proposition 3';
 const OUTPUT_FILE = path.join(__dirname, 'public', 'data', 'customer-intelligence.json');
+const TOTAL_ROWS = 15;
 
 const PROP1_COLS = [
   'customerCompanyName',
@@ -42,6 +44,9 @@ const PROP3_EXTRA = [
   'additionalCmiNotes',
 ];
 
+const ENTITY_NOTE =
+  '(Entity Across Transmission System Operators and Transmission Utilities, Distribution Network Operators, EPC and Grid Infrastructure Contractors, Industrial Power Network Owners, Government and Public Transmission Agencies)';
+
 function normalizeCell(value) {
   return String(value ?? '')
     .replace(/\r\n/g, ' ')
@@ -66,14 +71,14 @@ function findCompanyNameColumn(rows) {
   return null;
 }
 
-function parseSheet(wb, sheetName, extraColsAfterBase = []) {
-  const ws = wb.Sheets[sheetName];
+function parseReferenceSheet(wb, extraColsAfterBase = []) {
+  const ws = wb.Sheets[REFERENCE_SHEET];
   const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
   const titleLines = extractTitleLines(rows);
   const header = findCompanyNameColumn(rows);
 
   if (!header) {
-    throw new Error(`Could not find header row in sheet "${sheetName}"`);
+    throw new Error(`Could not find header row in sheet "${REFERENCE_SHEET}"`);
   }
 
   const { headerRowIdx, companyColIdx } = header;
@@ -106,6 +111,7 @@ function parseSheet(wb, sheetName, extraColsAfterBase = []) {
     }
 
     if (!sNo && !company) continue;
+    if (String(company).startsWith('Customer ')) continue;
 
     const record = { sNo: normalizeCell(sNo) };
     allCols.forEach((key, idx) => {
@@ -117,49 +123,72 @@ function parseSheet(wb, sheetName, extraColsAfterBase = []) {
   return { titleLines, rows: dataRows };
 }
 
-function postProcessRevisedProposition3Rows(rows) {
-  return rows.map((row, idx) => ({
-    ...row,
-    sNo: String(idx + 1),
-  }));
+function pickColumns(record, columns, sNo) {
+  const picked = { sNo: String(sNo) };
+  for (const col of columns) {
+    picked[col] = record[col] ?? '';
+  }
+  return picked;
+}
+
+function createPlaceholderRow(sNo, columns) {
+  const row = { sNo: String(sNo) };
+  const label = sNo === TOTAL_ROWS ? 'Customer N' : `Customer ${sNo + 1}`;
+
+  for (const col of columns) {
+    row[col] = col === 'customerCompanyName' ? label : 'xx';
+  }
+
+  return row;
+}
+
+function buildPropositionRows(fullRows, columns) {
+  const rows = fullRows.map((record, idx) => pickColumns(record, columns, idx + 1));
+
+  for (let sNo = rows.length + 1; sNo <= TOTAL_ROWS; sNo++) {
+    rows.push(createPlaceholderRow(sNo, columns));
+  }
+
+  return rows;
 }
 
 function main() {
-  const wb = XLSX.readFile(EXCEL_FILE);
+  const wb = XLSX.readFile(REFERENCE_FILE);
+  const parsed = parseReferenceSheet(wb, [...PROP2_EXTRA, ...PROP3_EXTRA]);
+  const fullRows = parsed.rows;
+
+  const prop3Columns = [...PROP1_COLS, ...PROP2_EXTRA, ...PROP3_EXTRA];
+  const prop2Columns = [...PROP1_COLS, ...PROP2_EXTRA];
+  const prop1Columns = [...PROP1_COLS];
 
   const output = {
     marketTitle: 'U.K. Composite Utility Transmission Pole Market - Customer Database',
     subtitle: 'Verified directory and insight on customers',
-    entityNote:
-      '(Entity Across Transmission System Operators and Transmission Utilities, Distribution Network Operators, EPC and Grid Infrastructure Contractors, Industrial Power Network Owners, Government and Public Transmission Agencies)',
+    entityNote: ENTITY_NOTE,
     proposition1: {
       id: 'proposition-1',
       label: 'Proposition 1 - Basic',
-      ...parseSheet(wb, 'Proposition 1 - Basic'),
+      titleLines: parsed.titleLines,
+      rows: buildPropositionRows(fullRows, prop1Columns),
     },
     proposition2: {
       id: 'proposition-2',
       label: 'Proposition 2 - Advance',
-      ...parseSheet(wb, 'Proposition 2 - Advance', PROP2_EXTRA),
+      titleLines: parsed.titleLines,
+      rows: buildPropositionRows(fullRows, prop2Columns),
     },
     proposition3: {
       id: 'proposition-3',
       label: 'Proposition 3 - Premium',
-      ...(() => {
-        const parsed = parseSheet(wb, 'Revised Proposition 3', [
-          ...PROP2_EXTRA,
-          ...PROP3_EXTRA,
-        ]);
-        return {
-          ...parsed,
-          rows: postProcessRevisedProposition3Rows(parsed.rows),
-        };
-      })(),
+      titleLines: parsed.titleLines,
+      rows: buildPropositionRows(fullRows, prop3Columns),
     },
   };
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
   console.log('Written', OUTPUT_FILE);
+  console.log('Source:', REFERENCE_FILE, '>', REFERENCE_SHEET);
+  console.log('Customers loaded:', fullRows.length);
   console.log('P1 rows:', output.proposition1.rows.length);
   console.log('P2 rows:', output.proposition2.rows.length);
   console.log('P3 rows:', output.proposition3.rows.length);
