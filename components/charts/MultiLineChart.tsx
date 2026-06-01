@@ -101,11 +101,8 @@ export function MultiLineChart({ title, height = 400 }: MultiLineChartProps) {
       // For segment mode with Level 2 aggregation, extract keys from prepared data
       series = extractSeriesFromPreparedData()
     } else if (filters.viewMode === 'geography-mode') {
-      // When multiple segments are selected, each line represents a geography
-      // Use selected geographies when Global data is used as fallback
-      const hasOnlyGlobalRecords = filtered.every(r => r.geography === 'Global')
-      const hasNonGlobalSelection = filters.geographies.some(g => g !== 'Global')
-      series = (hasOnlyGlobalRecords && hasNonGlobalSelection && !filters.geographies.includes('Global'))
+      // Prefer explicitly selected geographies so each selection gets its own line
+      series = filters.geographies.length > 0
         ? filters.geographies.filter(g => g !== 'Global')
         : getUniqueGeographies(filtered)
     } else if (filters.viewMode === 'matrix') {

@@ -217,13 +217,14 @@ export function GroupedBarChart({ title, height = 400 }: GroupedBarChartProps) {
         })
       } else if (filters.viewMode === 'geography-mode') {
         // Primary: geographies (bar groups), Secondary: segments (stacks)
-        // Use selected geographies instead of record geographies when Global data is used as fallback
         const hasOnlyGlobalRecords = filtered.every(r => r.geography === 'Global')
 
-        // If user selected non-Global geographies but we only have Global records, use selected geographies
-        const uniqueGeographies = (hasOnlyGlobalRecords && !filters.geographies.includes('Global'))
-          ? filters.geographies
-          : getUniqueGeographies(filtered)
+        // Prefer explicitly selected geographies so each selection gets its own bar group
+        const uniqueGeographies = filters.geographies.length > 0
+          ? filters.geographies.filter(g => g !== 'Global')
+          : (hasOnlyGlobalRecords && !filters.geographies.includes('Global'))
+            ? filters.geographies
+            : getUniqueGeographies(filtered)
         const uniqueSegments = getUniqueSegments(filtered)
 
         stackedSeries = {

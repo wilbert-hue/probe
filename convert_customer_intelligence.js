@@ -3,7 +3,7 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 const SOURCE_FILE =
-  'Sample Framework_Customer Database_Global Industrial CO₂ Laser Market.xlsx';
+  'Sample Framework_Customer Database_Global Probe Cards and Pogo Test Sockets Market.xlsx';
 const OUTPUT_FILE = path.join(__dirname, 'public', 'data', 'customer-intelligence.json');
 
 const SHEET_CONFIG = {
@@ -14,7 +14,8 @@ const SHEET_CONFIG = {
     columns: [
       'customerNameCompanyName',
       'businessOverview',
-      'industryVertical',
+      'exactCustomerType',
+      'waferSortFinalTestUseCase',
       'totalAnnualRevenue',
       'customerSizeScale',
       'keyContactPerson',
@@ -23,8 +24,7 @@ const SHEET_CONFIG = {
       'phoneWhatsappNumber',
       'linkedInProfile',
       'websiteUrl',
-      'keyBuyingCriteria',
-      'keyPainPoints',
+      'additionalCommentsNotes',
     ],
   },
   proposition2: {
@@ -34,27 +34,8 @@ const SHEET_CONFIG = {
     columns: [
       'customerNameCompanyName',
       'businessOverview',
-      'industryVertical',
-      'totalAnnualRevenue',
-      'customerSizeScale',
-      'keyContactPerson',
-      'designationRole',
-      'emailAddress',
-      'phoneWhatsappNumber',
-      'linkedInProfile',
-      'websiteUrl',
-      'keyBuyingCriteria',
-      'keyPainPoints',
-    ],
-  },
-  proposition3: {
-    sheet: 'Proposition 3 - Premium',
-    label: 'Proposition 3 - Premium',
-    id: 'proposition-3',
-    columns: [
-      'customerNameCompanyName',
-      'businessOverview',
-      'industryVertical',
+      'exactCustomerType',
+      'waferSortFinalTestUseCase',
       'totalAnnualRevenue',
       'customerSizeScale',
       'keyContactPerson',
@@ -68,12 +49,40 @@ const SHEET_CONFIG = {
       'upcomingTriggersAndInitiatives',
       'budgetOwnership',
       'procurementModel',
+      'additionalCommentsNotes',
+    ],
+  },
+  proposition3: {
+    sheet: 'Proposition 3 - Premium',
+    label: 'Proposition 3 - Premium',
+    id: 'proposition-3',
+    columns: [
+      'customerNameCompanyName',
+      'businessOverview',
+      'exactCustomerType',
+      'waferSortFinalTestUseCase',
+      'totalAnnualRevenue',
+      'customerSizeScale',
+      'keyContactPerson',
+      'designationRole',
+      'emailAddress',
+      'phoneWhatsappNumber',
+      'linkedInProfile',
+      'websiteUrl',
+      'keyBuyingCriteria',
+      'keyPainPoints',
+      'upcomingTriggersAndInitiatives',
+      'budgetOwnership',
+      'procurementModel',
+      'vendorSelectionCriteria',
       'preferredEngagementType',
-      'preferredSolutionType',
       'preferredDeploymentModel',
+      'preferredSolutionType',
+      'integrationTechnicalServiceRequirements',
       'performanceExpectations',
       'customerBenchmarkingSummary',
       'additionalCommentsNotes',
+      'salesPrioritizationNote',
     ],
   },
 };
@@ -100,7 +109,12 @@ function findHeaderRow(rows) {
   for (let r = 0; r < Math.min(rows.length, 10); r++) {
     const idx = rows[r].findIndex((cell) => {
       const text = String(cell).trim();
-      return text === 'Customer Name/Company Name' || text.startsWith('Customer Name/Company');
+      return (
+        text === 'Customer or Company Name' ||
+        text === 'Customer Name/Company Name' ||
+        text.startsWith('Customer Name/Company') ||
+        text.startsWith('Customer or Company')
+      );
     });
     if (idx !== -1) {
       return { headerRowIdx: r, companyColIdx: idx };
@@ -134,7 +148,13 @@ function parseSheet(wb, config) {
     const sNo = row[sNoColIdx];
     const company = row[companyColIdx];
 
-    if (String(company).trim() === 'Customer Name/Company Name') continue;
+    if (
+      String(company).trim() === 'Customer or Company Name' ||
+      String(company).trim() === 'Customer Name/Company Name'
+    ) {
+      continue;
+    }
+
     if (!company) {
       const prev = dataRows[dataRows.length - 1];
       const altContact = normalizeCell(row[companyColIdx + 5]);
@@ -153,14 +173,6 @@ function parseSheet(wb, config) {
     }
 
     if (!sNo && !company) continue;
-    if (String(company).startsWith('Customer ')) {
-      const record = { sNo: normalizeCell(sNo) };
-      config.columns.forEach((key, idx) => {
-        record[key] = normalizeCell(row[companyColIdx + idx] ?? '', key.includes('Overview'));
-      });
-      dataRows.push(record);
-      continue;
-    }
 
     const record = { sNo: normalizeCell(sNo) };
     config.columns.forEach((key, idx) => {
@@ -180,7 +192,7 @@ function main() {
 
   const titleLines = prop1.titleLines.length ? prop1.titleLines : prop3.titleLines;
   const marketTitle =
-    titleLines[0] || 'Global Industrial CO₂ Laser Market - Customer Database';
+    titleLines[0] || 'Global Probe Cards and Pogo Test Sockets Market - Customer Database';
   const subtitle = titleLines[1] || 'Verified directory and insight on customers';
 
   const output = {
@@ -212,6 +224,7 @@ function main() {
   console.log('P1 rows:', output.proposition1.rows.length);
   console.log('P2 rows:', output.proposition2.rows.length);
   console.log('P3 rows:', output.proposition3.rows.length);
+  console.log('Sample P1:', output.proposition1.rows[0]?.customerNameCompanyName);
 }
 
 main();

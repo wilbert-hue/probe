@@ -2,7 +2,8 @@ export interface CustomerIntelligenceRow {
   sNo: number | string
   customerNameCompanyName: string
   businessOverview: string
-  industryVertical: string
+  exactCustomerType: string
+  waferSortFinalTestUseCase: string
   totalAnnualRevenue: string
   customerSizeScale: string
   keyContactPerson: string
@@ -16,12 +17,15 @@ export interface CustomerIntelligenceRow {
   upcomingTriggersAndInitiatives?: string
   budgetOwnership?: string
   procurementModel?: string
+  vendorSelectionCriteria?: string
   preferredEngagementType?: string
-  preferredSolutionType?: string
   preferredDeploymentModel?: string
+  preferredSolutionType?: string
+  integrationTechnicalServiceRequirements?: string
   performanceExpectations?: string
   customerBenchmarkingSummary?: string
   additionalCommentsNotes?: string
+  salesPrioritizationNote?: string
 }
 
 export interface CustomerIntelligenceProposition {
@@ -56,144 +60,156 @@ export interface TableColumn {
 }
 
 export const CUSTOMER_INFO_COLUMNS: TableColumn[] = [
-  { key: 'customerNameCompanyName', label: 'Customer Name/Company Name', headerClass: 'bg-[#FFF8DC]', minWidth: '180px' },
-  { key: 'businessOverview', label: 'Business Overview', headerClass: 'bg-[#FFF8DC]', minWidth: '150px' },
   {
-    key: 'industryVertical',
-    label:
-      'Industry Vertical (Automotive Manufacturing / Aerospace & Defense / Electronics & Semiconductor Manufacturing / Packaging & Converting / Metal Fabrication / Industrial Machinery Manufacturing / Medical Device Manufacturing / Textile Manufacturing / Woodworking & Furniture Manufacturing / Glass & Ceramics Processing / Rubber & Plastics Processing / Consumer Goods Manufacturing)',
+    key: 'customerNameCompanyName',
+    label: 'Customer or Company Name',
+    headerClass: 'bg-[#FFF8DC]',
+    minWidth: '180px',
+  },
+  { key: 'businessOverview', label: 'Business Overview', headerClass: 'bg-[#FFF8DC]', minWidth: '200px' },
+  {
+    key: 'exactCustomerType',
+    label: 'Probe Card and Pogo Test Socket Exact Customer Type',
+    headerClass: 'bg-[#FFF8DC]',
+    minWidth: '220px',
+  },
+  {
+    key: 'waferSortFinalTestUseCase',
+    label: 'Wafer Sort and Final Test Use Case',
     headerClass: 'bg-[#FFF8DC]',
     minWidth: '220px',
   },
   {
     key: 'totalAnnualRevenue',
-    label: 'Total Annual Revenue (US$ Million)',
+    label: 'Annual Revenue in United States Dollars Million, 2025',
     headerClass: 'bg-[#FFF8DC]',
     minWidth: '180px',
-  },
-  {
-    key: 'customerSizeScale',
-    label:
-      'Customer Size / Scale (Large enterprise (multi-location national/global) / Mid-size integrators/ Small single-location operator / Government authority)',
-    headerClass: 'bg-[#FFF8DC]',
-    minWidth: '200px',
   },
 ]
 
 export const CONTACT_COLUMNS: TableColumn[] = [
-  { key: 'keyContactPerson', label: 'Key Contact Person', headerClass: 'bg-[#B0E0E6]', minWidth: '130px' },
-  { key: 'designationRole', label: 'Designation/Role', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
+  { key: 'customerSizeScale', label: 'Size and Scale', headerClass: 'bg-[#B0E0E6]', minWidth: '180px' },
+  {
+    key: 'keyContactPerson',
+    label: 'Relevant Key Contact Person',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '160px',
+  },
+  { key: 'designationRole', label: 'Role or Designation', headerClass: 'bg-[#B0E0E6]', minWidth: '170px' },
   { key: 'emailAddress', label: 'Email Address', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'email' },
-  { key: 'phoneWhatsappNumber', label: 'Phone/WhatsApp Number', headerClass: 'bg-[#B0E0E6]', minWidth: '150px' },
+  {
+    key: 'phoneWhatsappNumber',
+    label: 'Phone Number or WhatsApp Number',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '170px',
+  },
   { key: 'linkedInProfile', label: 'LinkedIn Profile', headerClass: 'bg-[#B0E0E6]', minWidth: '150px', isLink: 'url' },
-  { key: 'websiteUrl', label: 'Website URL', headerClass: 'bg-[#B0E0E6]', minWidth: '130px', isLink: 'url' },
+  { key: 'websiteUrl', label: 'Company Website', headerClass: 'bg-[#B0E0E6]', minWidth: '130px', isLink: 'url' },
 ]
 
-export const PROFESSIONAL_DRIVERS_COLUMNS_BASIC: TableColumn[] = [
+export const BUYING_DRIVERS_COLUMNS_BASIC: TableColumn[] = []
+
+export const BUYING_DRIVERS_COLUMNS_ADVANCE: TableColumn[] = [
   {
     key: 'keyBuyingCriteria',
-    label:
-      'Key Buying Criteria (Spectral resolution (number of bands, wavelength accuracy)/Spatial resolution + frame rate (especially for snapshot systems like Living Optics)/Real-time processing capability/Size, weight, and power (SWaP optimization)/Integration capability (SDKs, APIs, AI pipelines)/Calibration accuracy & stability/Application-specific tuning (VNIR / SWIR / LWIR)/Reliability in harsh environments (defense, industrial)/Vendor technical support & customization capability)',
+    label: 'Probe Card and Pogo Test Socket Buying Criteria',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '220px',
   },
   {
     key: 'keyPainPoints',
-    label:
-      'Key Pain Points (High cost of hyperspectral systems/Trade-off between spectral vs spatial resolution/Large data volumes - processing/storage challenges/Integration complexity with existing vision systems/Limited real-time performance (for traditional pushbroom systems)/Calibration drift and maintenance issues/Lack of skilled personnel for spectral data interpretation/Power consumption constraints (especially UAV/drone use)/Fragmented vendor ecosystem)',
+    label: 'Probe Card and Pogo Test Socket Pain Points',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '220px',
   },
-]
-
-export const PROFESSIONAL_DRIVERS_COLUMNS_ADVANCE: TableColumn[] = [
-  {
-    key: 'keyBuyingCriteria',
-    label:
-      'Key Buying Criteria (Performance Requirements/Technical Requirements/Integration Requirements/Operational Requirements/Commercial Requirements/Vendor Evaluation Parameters)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-  {
-    key: 'keyPainPoints',
-    label:
-      'Key Pain Points (Operational Challenges/Technical Challenges/Cost Challenges/Workforce Challenges/Manufacturing Challenges/Supply Chain Challenges)',
-    headerClass: 'bg-[#B0E0E6]',
-    minWidth: '200px',
-  },
-]
-
-export const PROFESSIONAL_DRIVERS_COLUMNS_PREMIUM: TableColumn[] = [
-  ...PROFESSIONAL_DRIVERS_COLUMNS_ADVANCE,
   {
     key: 'upcomingTriggersAndInitiatives',
-    label:
-      'Upcoming Triggers and Initiatives (Industry 4.0 Transformation Projects / Smart Factory Initiatives / Production Line Automation / Capacity Expansion / Equipment Replacement / New Product Launch / Regulatory Compliance Upgrade / Export Market Entry / Sustainability / Energy Efficiency Program)',
+    label: 'Buying Trigger, Technical Maturity, Risk Exposure, and Product Complexity',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '220px',
+    minWidth: '240px',
   },
 ]
 
-export const PURCHASING_BEHAVIOUR_COLUMNS: TableColumn[] = [
+export const PURCHASING_BEHAVIOUR_COLUMNS_ADVANCE: TableColumn[] = [
   {
     key: 'budgetOwnership',
-    label:
-      'Budget Ownership (Manufacturing Department / Engineering Department / Capital Investment Committee / Procurement Department / Plant Manager / Corporate HQ)',
+    label: 'Budget Owner',
     headerClass: 'bg-[#DDA0DD]',
-    minWidth: '200px',
+    minWidth: '180px',
   },
   {
     key: 'procurementModel',
-    label:
-      'Procurement Model (Direct OEM Procurement / Authorized Distributor Procurement / System Integrator Procurement / Rental/Leasing Model / Service Contract Model)',
+    label: 'Procurement Model',
+    headerClass: 'bg-[#DDA0DD]',
+    minWidth: '200px',
+  },
+]
+
+export const BUYING_DRIVERS_COLUMNS_PREMIUM: TableColumn[] = [
+  ...BUYING_DRIVERS_COLUMNS_ADVANCE,
+  ...PURCHASING_BEHAVIOUR_COLUMNS_ADVANCE,
+]
+
+export const PURCHASING_BEHAVIOUR_COLUMNS_PREMIUM: TableColumn[] = [
+  {
+    key: 'vendorSelectionCriteria',
+    label: 'Vendor Selection Criteria',
     headerClass: 'bg-[#DDA0DD]',
     minWidth: '200px',
   },
   {
     key: 'preferredEngagementType',
-    label:
-      'Preferred Engagement Type (Pilot Project / Proof-of-Concept Deployment / Production Line Integration Project / Long-Term Service Contract / Equipment Purchase Only)',
+    label: 'Preferred Engagement Model',
     headerClass: 'bg-[#DDA0DD]',
-    minWidth: '200px',
+    minWidth: '180px',
+  },
+  {
+    key: 'preferredDeploymentModel',
+    label: 'Preferred Deployment and Service Model',
+    headerClass: 'bg-[#DDA0DD]',
+    minWidth: '220px',
   },
 ]
 
 export const SOLUTION_REQUIREMENTS_COLUMNS: TableColumn[] = [
   {
     key: 'preferredSolutionType',
-    label:
-      'Preferred Solution Type (Standalone CO₂ Laser System / Integrated Laser Processing Module / OEM-Embedded Laser Source / Custom-Engineered Laser System / Multi-Process Laser Platform)',
+    label: 'Preferred Solution Type',
     headerClass: 'bg-[#DEB887]',
     minWidth: '220px',
   },
   {
-    key: 'preferredDeploymentModel',
-    label:
-      'Preferred Deployment Model (Standalone Factory Deployment / Production Line Integration / Robotic Cell Integration / Mobile Processing Unit / Multi-Site Standardized Deployment)',
+    key: 'integrationTechnicalServiceRequirements',
+    label: 'Integration, Technical, and Service Requirements',
     headerClass: 'bg-[#DEB887]',
-    minWidth: '220px',
+    minWidth: '240px',
   },
   {
     key: 'performanceExpectations',
-    label:
-      'Performance Expectations (High Processing Speed / Precision Accuracy / Consistent Beam Quality / Low Maintenance Downtime / Energy Efficiency / Process Repeatability / Integration Flexibility / After-Sales Technical Support)',
+    label: 'Performance Expectations',
     headerClass: 'bg-[#DEB887]',
-    minWidth: '220px',
+    minWidth: '200px',
   },
 ]
 
-export const CMI_INSIGHTS_COLUMNS: TableColumn[] = [
+export const CMI_INSIGHTS_COLUMNS_PREMIUM: TableColumn[] = [
   {
     key: 'customerBenchmarkingSummary',
-    label: 'Customer Benchmarking Summary (Potential Customers)',
+    label: 'Benchmark Summary',
     headerClass: 'bg-[#B0E0E6]',
     minWidth: '200px',
   },
   {
     key: 'additionalCommentsNotes',
-    label: 'Additional Comments/Notes By CMI team',
+    label: 'Additional Customer Market Intelligence Notes',
     headerClass: 'bg-[#B0E0E6]',
-    minWidth: '180px',
+    minWidth: '220px',
+  },
+  {
+    key: 'salesPrioritizationNote',
+    label: 'Sales Prioritization Note',
+    headerClass: 'bg-[#B0E0E6]',
+    minWidth: '200px',
   },
 ]
 
@@ -206,35 +222,40 @@ export const PROPOSITION_TABLE_CONFIG: Record<'proposition1' | 'proposition2' | 
   proposition1: {
     groups: [
       { label: 'Customer Information', colSpan: 5, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Professional Drivers', colSpan: 2, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Contact Details', colSpan: 7, headerClass: 'bg-[#87CEEB]' },
     ],
-    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...PROFESSIONAL_DRIVERS_COLUMNS_BASIC],
+    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS],
   },
   proposition2: {
     groups: [
       { label: 'Customer Information', colSpan: 5, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Professional Drivers', colSpan: 2, headerClass: 'bg-[#87CEEB]' },
-    ],
-    columns: [...CUSTOMER_INFO_COLUMNS, ...CONTACT_COLUMNS, ...PROFESSIONAL_DRIVERS_COLUMNS_ADVANCE],
-  },
-  proposition3: {
-    groups: [
-      { label: 'Customer Information', colSpan: 5, headerClass: 'bg-[#E8C4A0]' },
-      { label: 'Contact Details', colSpan: 6, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Professional Drivers', colSpan: 3, headerClass: 'bg-[#87CEEB]' },
-      { label: 'Purchasing Behaviour Metrics', colSpan: 3, headerClass: 'bg-[#9370DB] text-white' },
-      { label: 'Solution Requirements', colSpan: 3, headerClass: 'bg-[#D4A574]' },
-      { label: 'CMI Insights', colSpan: 2, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Contact Details', colSpan: 7, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Buying Drivers', colSpan: 3, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Purchasing Behaviour Metrics', colSpan: 2, headerClass: 'bg-[#9370DB] text-white' },
     ],
     columns: [
       ...CUSTOMER_INFO_COLUMNS,
       ...CONTACT_COLUMNS,
-      ...PROFESSIONAL_DRIVERS_COLUMNS_PREMIUM,
-      ...PURCHASING_BEHAVIOUR_COLUMNS,
+      ...BUYING_DRIVERS_COLUMNS_ADVANCE,
+      ...PURCHASING_BEHAVIOUR_COLUMNS_ADVANCE,
+    ],
+  },
+  proposition3: {
+    groups: [
+      { label: 'Customer Information', colSpan: 5, headerClass: 'bg-[#E8C4A0]' },
+      { label: 'Contact Details', colSpan: 7, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Buying Drivers', colSpan: 5, headerClass: 'bg-[#87CEEB]' },
+      { label: 'Purchasing Behaviour Metrics', colSpan: 3, headerClass: 'bg-[#9370DB] text-white' },
+      { label: 'Solution Requirements', colSpan: 3, headerClass: 'bg-[#D4A574]' },
+      { label: 'CMI Insights', colSpan: 3, headerClass: 'bg-[#87CEEB]' },
+    ],
+    columns: [
+      ...CUSTOMER_INFO_COLUMNS,
+      ...CONTACT_COLUMNS,
+      ...BUYING_DRIVERS_COLUMNS_PREMIUM,
+      ...PURCHASING_BEHAVIOUR_COLUMNS_PREMIUM,
       ...SOLUTION_REQUIREMENTS_COLUMNS,
-      ...CMI_INSIGHTS_COLUMNS,
+      ...CMI_INSIGHTS_COLUMNS_PREMIUM,
     ],
   },
 }

@@ -1,5 +1,4 @@
 /**
- * @deprecated Use generate_co2_data.js directly.
- * Kept for backward compatibility — generates CO₂ laser market demo data.
+ * Generate demo market data for the Probe Card & Test Socket dashboard.
  */
-require('./generate_co2_data.js');
+require('./generate_probe_data.js');

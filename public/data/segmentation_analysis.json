@@ -1,82 +1,44 @@
 {
   "Global": {
-    "By Excitation Method": {
-      "RF-Excited CO₂ Lasers": {},
-      "DC-Excited CO₂ Lasers": {}
-    },
-    "By Gas Flow & Cooling Technology": {
-      "Sealed-Off / Diffusion-Cooled": {},
-      "Fast Axial Flow": {},
-      "TEA (Transverse Excited Atmosphere)": {}
-    },
-    "By Power Range": {
-      "Up to 300 W": {},
-      "Above 300 W to 500 W": {},
-      "Above 500 W to 1 kW": {},
-      "Above 1 kW to 2 kW": {},
-      "Above 2 kW to 5 kW": {},
-      "Above 5 kW": {}
-    },
-    "By Deployment": {
-      "Standalone / Benchtop Systems": {},
-      "Production Line Integrated Systems": {},
-      "Robotic Integrated Systems": {},
-      "Gantry / Portal Systems": {}
-    },
-    "By Materials Processed": {
-      "Paper and Labels": {},
-      "Cardboard and Corrugated Board": {},
-      "Plastics and Polymers": {},
-      "Rubber and Foam": {},
-      "Textiles and Fabrics": {},
-      "Leather": {},
-      "Wood and Wood Derivatives": {},
-      "Metals": {},
-      "Ceramics": {},
-      "Others (Composite Materials, Glass, etc.)": {}
-    },
-    "By Industry Vertical": {
-      "Packaging and Converting": {},
-      "Printing and Graphics": {},
-      "Food and Beverage": {},
-      "Plastics and Polymer Manufacturing": {},
-      "Textile and Apparel": {},
-      "Leather and Footwear Manufacturing": {},
-      "Automotive and Transportation": {},
-      "Electronics and Semiconductor": {},
-      "Furniture and Wood Products Manufacturing": {},
-      "Building and Construction": {},
-      "Consumer Goods": {},
-      "Others (Energy and Utilities, etc.)": {}
-    },
-    "By Application": {
-      "Material Removal Applications": {
-        "Laser Cutting": {},
-        "Laser Engraving": {},
-        "Laser Drilling": {},
-        "Laser Micro-Perforation": {},
-        "Laser Ablation": {},
-        "Laser Kiss-Cutting": {}
+    "By Product Type": {
+      "Probe Cards": {
+        "Cantilever Probe Cards": {},
+        "Vertical Probe Cards": {}
       },
-      "Surface Treatment Applications": {
-        "Cleaning/Stripping": {},
-        "Hardening": {},
-        "Texturing": {}
-      },
-      "Joining Applications": {
-        "Welding": {},
-        "Sealing / Bonding": {}
-      },
-      "Identification & Traceability": {
-        "Laser Marking": {},
-        "Laser Coding": {}
-      },
-      "Converting Applications": {
-        "Label Converting": {},
-        "Paper Converting": {},
-        "Film Converting": {},
-        "Packaging Converting": {}
+      "Pogo Test Sockets": {
+        "Standard Signal Pogo Test Sockets": {},
+        "RF Pogo Test Sockets": {},
+        "Power Pogo Test Sockets": {},
+        "Kelvin Pogo Test Sockets": {}
       }
+    },
+    "By Probe Card Fabrication Technology": {
+      "Conventional Needle-Based Probe Technology": {},
+      "Buckling Beam Probe Technology": {},
+      "MEMS-Based Probe Technology": {},
+      "Thin-Film Probe Technology": {}
+    },
+    "By Testing Stage": {
+      "Wafer Probe Testing": {},
+      "Final Package Testing": {},
+      "Burn-In and Reliability Testing": {},
+      "Engineering, Characterization, and Failure Analysis Testing": {}
+    },
+    "By Semiconductor Device Type": {
+      "Memory Devices": {},
+      "Digital Logic, Processor, ASIC, and SoC Devices": {},
+      "Analog and Mixed-Signal Non-RF ICs": {},
+      "RF, Microwave, and Wireless ICs": {},
+      "Power Discrete Devices and Power ICs": {},
+      "Optoelectronic and Imaging Devices": {},
+      "MEMS Devices and Other Specialty Semiconductor Devices": {}
+    },
+    "By Direct Customer Type": {
+      "Integrated Device Manufacturers": {},
+      "Pure-Play Foundries": {},
+      "OSAT Companies": {},
+      "Independent Semiconductor Test Service Providers": {},
+      "Research, Development, and Failure Analysis Laboratories": {}
     },
     "By Region": {
       "North America": {

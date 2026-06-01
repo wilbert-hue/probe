@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-data": "node generate_co2_data.js",
+    "generate-data": "node generate_probe_data.js",
     "generate-customer-intelligence": "node convert_customer_intelligence.js"
   },
   "dependencies": {
