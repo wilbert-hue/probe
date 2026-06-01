@@ -6,6 +6,12 @@ const SOURCE_FILE =
   'Sample Framework_Customer Database_Global Probe Cards and Pogo Test Sockets Market.xlsx';
 const OUTPUT_FILE = path.join(__dirname, 'public', 'data', 'customer-intelligence.json');
 
+const EXCLUDED_COMPANIES = new Set([
+  'Amkor Technology',
+  'Broadcom Inc.',
+  'JCET Group',
+]);
+
 const SHEET_CONFIG = {
   proposition1: {
     sheet: 'Proposition 1 - Basic',
@@ -174,12 +180,19 @@ function parseSheet(wb, config) {
 
     if (!sNo && !company) continue;
 
+    const companyName = normalizeCell(company);
+    if (EXCLUDED_COMPANIES.has(companyName)) continue;
+
     const record = { sNo: normalizeCell(sNo) };
     config.columns.forEach((key, idx) => {
       record[key] = normalizeCell(row[companyColIdx + idx] ?? '', key === 'businessOverview');
     });
     dataRows.push(record);
   }
+
+  dataRows.forEach((record, index) => {
+    record.sNo = String(index + 1);
+  });
 
   return { titleLines, rows: dataRows };
 }

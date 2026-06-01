@@ -171,38 +171,6 @@
       },
       {
         "sNo": "11",
-        "customerNameCompanyName": "Amkor Technology",
-        "businessOverview": "Global outsourced semiconductor assembly and test provider for advanced packaging, assembly, and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test sockets, wafer sort support, advanced package test, and automotive test",
-        "totalAnnualRevenue": "6710",
-        "customerSizeScale": "Large global outsourced semiconductor assembly and test provider with United States, Korea, Japan, Portugal, Philippines, and Vietnam footprint",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Global Test Engineering or Test Hardware Sourcing",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "amkor.com",
-        "additionalCommentsNotes": "Prioritize for advanced package test sockets, automotive test sockets, and multi site test hardware standardization"
-      },
-      {
-        "sNo": "12",
-        "customerNameCompanyName": "JCET Group",
-        "businessOverview": "China based outsourced semiconductor assembly and test provider offering integrated circuit packaging and back end manufacturing and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test, wafer probe, and advanced packaging test for Chinese and global customers",
-        "totalAnnualRevenue": "5400",
-        "customerSizeScale": "Large China led outsourced semiconductor assembly and test provider with global customer base",
-        "keyContactPerson": "xx",
-        "designationRole": "Head of Test Engineering or Back End Procurement",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "jcetglobal.com",
-        "additionalCommentsNotes": "Prioritize for China based socket supply, advanced package test, and local repair supported programs"
-      },
-      {
-        "sNo": "13",
         "customerNameCompanyName": "Powertech Technology Inc.",
         "businessOverview": "Taiwan outsourced semiconductor assembly and test provider focused on memory and logic packaging and testing",
         "exactCustomerType": "Memory Focused Outsourced Semiconductor Assembly and Test Provider",
@@ -218,7 +186,7 @@
         "additionalCommentsNotes": "Prioritize for memory final test sockets, high parallel test consumables, and repair cycle support"
       },
       {
-        "sNo": "14",
+        "sNo": "12",
         "customerNameCompanyName": "King Yuan Electronics Co.",
         "businessOverview": "Taiwan pure play semiconductor testing service provider",
         "exactCustomerType": "Pure Play Semiconductor Test Service Provider",
@@ -234,7 +202,7 @@
         "additionalCommentsNotes": "Prioritize as a direct test capacity buyer for wafer probe cards, final test sockets, and fast new product introduction support"
       },
       {
-        "sNo": "15",
+        "sNo": "13",
         "customerNameCompanyName": "ChipMOS Technologies",
         "businessOverview": "Outsourced semiconductor assembly and test provider focused on display driver integrated circuits, memory, mixed signal, and bumping and testing",
         "exactCustomerType": "Display Driver and Memory Outsourced Semiconductor Assembly and Test Provider",
@@ -250,7 +218,7 @@
         "additionalCommentsNotes": "Prioritize for display driver wafer probe, fine pitch probe cards, and cost sensitive final test sockets"
       },
       {
-        "sNo": "16",
+        "sNo": "14",
         "customerNameCompanyName": "UTAC Group",
         "businessOverview": "Private outsourced semiconductor assembly and test provider offering assembly and testing from Singapore, Thailand, Indonesia, and China",
         "exactCustomerType": "Automotive and Mixed Signal Outsourced Semiconductor Assembly and Test Provider",
@@ -266,7 +234,7 @@
         "additionalCommentsNotes": "Prioritize for automotive test sockets, traceable test hardware, and long lifecycle service contracts"
       },
       {
-        "sNo": "17",
+        "sNo": "15",
         "customerNameCompanyName": "NVIDIA Corporation",
         "businessOverview": "Fabless artificial intelligence graphics processing unit, networking, accelerated computing, and automotive semiconductor company",
         "exactCustomerType": "Fabless Artificial Intelligence Accelerator Demand Owner",
@@ -282,7 +250,7 @@
         "additionalCommentsNotes": "Prioritize for artificial intelligence accelerator sockets, system level test sockets, and advanced package test interface specification influence"
       },
       {
-        "sNo": "18",
+        "sNo": "16",
         "customerNameCompanyName": "Advanced Micro Devices",
         "businessOverview": "Fabless central processing unit, graphics processing unit, adaptive computing, and data center semiconductor company",
         "exactCustomerType": "Fabless Central Processing Unit and Graphics Processing Unit Demand Owner",
@@ -298,7 +266,7 @@
         "additionalCommentsNotes": "Prioritize for server processor sockets, graphics processor test sockets, chiplet validation sockets, and advanced packaging probe requirements"
       },
       {
-        "sNo": "19",
+        "sNo": "17",
         "customerNameCompanyName": "Qualcomm Incorporated",
         "businessOverview": "Fabless mobile, radio frequency, automotive, Internet of Things, and connectivity semiconductor company",
         "exactCustomerType": "Fabless Mobile and Radio Frequency System on Chip Demand Owner",
@@ -312,22 +280,6 @@
         "linkedInProfile": "xx",
         "websiteUrl": "qualcomm.com",
         "additionalCommentsNotes": "Prioritize for radio frequency sockets, mobile chipset final test, automotive connectivity chips, and outsourced semiconductor assembly and test specification influence"
-      },
-      {
-        "sNo": "20",
-        "customerNameCompanyName": "Broadcom Inc.",
-        "businessOverview": "Semiconductor and infrastructure software company with artificial intelligence custom application specific integrated circuits, networking, broadband, wireless, and storage products",
-        "exactCustomerType": "Fabless Networking and Application Specific Integrated Circuit Demand Owner",
-        "waferSortFinalTestUseCase": "Indirect demand through foundry and outsourced semiconductor assembly and test providers for artificial intelligence application specific integrated circuits, networking chips, radio frequency front end products, and storage integrated circuits",
-        "totalAnnualRevenue": "63887",
-        "customerSizeScale": "Large artificial intelligence application specific integrated circuit and networking semiconductor buyer; semiconductor segment revenue of United States Dollars 36,858 million",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Application Specific Integrated Circuit Test Engineering or Outsourced Semiconductor Assembly and Test Supplier Engineering",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "broadcom.com",
-        "additionalCommentsNotes": "Prioritize for artificial intelligence networking chips, high speed switch test sockets, application specific integrated circuit validation, and advanced package interface qualification"
       }
     ]
   },
@@ -551,48 +503,6 @@
       },
       {
         "sNo": "11",
-        "customerNameCompanyName": "Amkor Technology",
-        "businessOverview": "Global outsourced semiconductor assembly and test provider for advanced packaging, assembly, and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test sockets, wafer sort support, advanced package test, and automotive test",
-        "totalAnnualRevenue": "6710",
-        "customerSizeScale": "Large global outsourced semiconductor assembly and test provider with United States, Korea, Japan, Portugal, Philippines, and Vietnam footprint",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Global Test Engineering or Test Hardware Sourcing",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "amkor.com",
-        "keyBuyingCriteria": "Advanced package socket quality, automotive reliability, and global service",
-        "keyPainPoints": "High mix, customer approvals, and multi site standardization",
-        "upcomingTriggersAndInitiatives": "High complexity; advanced packaging and automotive test drive interface complexity",
-        "budgetOwnership": "Global Test Operations and Supply Chain",
-        "procurementModel": "Program sourcing with customer approved vendor list",
-        "additionalCommentsNotes": "Prioritize for advanced package test sockets, automotive test sockets, and multi site test hardware standardization"
-      },
-      {
-        "sNo": "12",
-        "customerNameCompanyName": "JCET Group",
-        "businessOverview": "China based outsourced semiconductor assembly and test provider offering integrated circuit packaging and back end manufacturing and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test, wafer probe, and advanced packaging test for Chinese and global customers",
-        "totalAnnualRevenue": "5400",
-        "customerSizeScale": "Large China led outsourced semiconductor assembly and test provider with global customer base",
-        "keyContactPerson": "xx",
-        "designationRole": "Head of Test Engineering or Back End Procurement",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "jcetglobal.com",
-        "keyBuyingCriteria": "Local supply, high volume socket cost, and quick engineering changes",
-        "keyPainPoints": "Customer ramp volatility, China localization, and package diversity",
-        "upcomingTriggersAndInitiatives": "High trigger from China semiconductor localization and advanced packaging",
-        "budgetOwnership": "Test Operations, Procurement, and Customer Program Management",
-        "procurementModel": "Approved vendor model with program level sourcing",
-        "additionalCommentsNotes": "Prioritize for China based socket supply, advanced package test, and local repair supported programs"
-      },
-      {
-        "sNo": "13",
         "customerNameCompanyName": "Powertech Technology Inc.",
         "businessOverview": "Taiwan outsourced semiconductor assembly and test provider focused on memory and logic packaging and testing",
         "exactCustomerType": "Memory Focused Outsourced Semiconductor Assembly and Test Provider",
@@ -613,7 +523,7 @@
         "additionalCommentsNotes": "Prioritize for memory final test sockets, high parallel test consumables, and repair cycle support"
       },
       {
-        "sNo": "14",
+        "sNo": "12",
         "customerNameCompanyName": "King Yuan Electronics Co.",
         "businessOverview": "Taiwan pure play semiconductor testing service provider",
         "exactCustomerType": "Pure Play Semiconductor Test Service Provider",
@@ -634,7 +544,7 @@
         "additionalCommentsNotes": "Prioritize as a direct test capacity buyer for wafer probe cards, final test sockets, and fast new product introduction support"
       },
       {
-        "sNo": "15",
+        "sNo": "13",
         "customerNameCompanyName": "ChipMOS Technologies",
         "businessOverview": "Outsourced semiconductor assembly and test provider focused on display driver integrated circuits, memory, mixed signal, and bumping and testing",
         "exactCustomerType": "Display Driver and Memory Outsourced Semiconductor Assembly and Test Provider",
@@ -655,7 +565,7 @@
         "additionalCommentsNotes": "Prioritize for display driver wafer probe, fine pitch probe cards, and cost sensitive final test sockets"
       },
       {
-        "sNo": "16",
+        "sNo": "14",
         "customerNameCompanyName": "UTAC Group",
         "businessOverview": "Private outsourced semiconductor assembly and test provider offering assembly and testing from Singapore, Thailand, Indonesia, and China",
         "exactCustomerType": "Automotive and Mixed Signal Outsourced Semiconductor Assembly and Test Provider",
@@ -676,7 +586,7 @@
         "additionalCommentsNotes": "Prioritize for automotive test sockets, traceable test hardware, and long lifecycle service contracts"
       },
       {
-        "sNo": "17",
+        "sNo": "15",
         "customerNameCompanyName": "NVIDIA Corporation",
         "businessOverview": "Fabless artificial intelligence graphics processing unit, networking, accelerated computing, and automotive semiconductor company",
         "exactCustomerType": "Fabless Artificial Intelligence Accelerator Demand Owner",
@@ -697,7 +607,7 @@
         "additionalCommentsNotes": "Prioritize for artificial intelligence accelerator sockets, system level test sockets, and advanced package test interface specification influence"
       },
       {
-        "sNo": "18",
+        "sNo": "16",
         "customerNameCompanyName": "Advanced Micro Devices",
         "businessOverview": "Fabless central processing unit, graphics processing unit, adaptive computing, and data center semiconductor company",
         "exactCustomerType": "Fabless Central Processing Unit and Graphics Processing Unit Demand Owner",
@@ -718,7 +628,7 @@
         "additionalCommentsNotes": "Prioritize for server processor sockets, graphics processor test sockets, chiplet validation sockets, and advanced packaging probe requirements"
       },
       {
-        "sNo": "19",
+        "sNo": "17",
         "customerNameCompanyName": "Qualcomm Incorporated",
         "businessOverview": "Fabless mobile, radio frequency, automotive, Internet of Things, and connectivity semiconductor company",
         "exactCustomerType": "Fabless Mobile and Radio Frequency System on Chip Demand Owner",
@@ -737,27 +647,6 @@
         "budgetOwnership": "Product Test and Outsourced Semiconductor Assembly and Test Management",
         "procurementModel": "Specification influence through outsourced semiconductor assembly and test providers and foundry plus direct engineering validation",
         "additionalCommentsNotes": "Prioritize for radio frequency sockets, mobile chipset final test, automotive connectivity chips, and outsourced semiconductor assembly and test specification influence"
-      },
-      {
-        "sNo": "20",
-        "customerNameCompanyName": "Broadcom Inc.",
-        "businessOverview": "Semiconductor and infrastructure software company with artificial intelligence custom application specific integrated circuits, networking, broadband, wireless, and storage products",
-        "exactCustomerType": "Fabless Networking and Application Specific Integrated Circuit Demand Owner",
-        "waferSortFinalTestUseCase": "Indirect demand through foundry and outsourced semiconductor assembly and test providers for artificial intelligence application specific integrated circuits, networking chips, radio frequency front end products, and storage integrated circuits",
-        "totalAnnualRevenue": "63887",
-        "customerSizeScale": "Large artificial intelligence application specific integrated circuit and networking semiconductor buyer; semiconductor segment revenue of United States Dollars 36,858 million",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Application Specific Integrated Circuit Test Engineering or Outsourced Semiconductor Assembly and Test Supplier Engineering",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "broadcom.com",
-        "keyBuyingCriteria": "High speed test sockets, radio frequency and millimeter wave capability, and application specific integrated circuit thermal and power handling",
-        "keyPainPoints": "Artificial intelligence accelerator and networking growth, high pin count, and hyperscaler qualification pressure",
-        "upcomingTriggersAndInitiatives": "Very high complexity for artificial intelligence application specific integrated circuits and networking chips; indirect sourcing model",
-        "budgetOwnership": "Application Specific Integrated Circuit Business Unit Test, Outsourced Semiconductor Assembly and Test Management, and Supply Chain",
-        "procurementModel": "Specification influence through foundry and outsourced semiconductor assembly and test providers; customer program approval",
-        "additionalCommentsNotes": "Prioritize for artificial intelligence networking chips, high speed switch test sockets, application specific integrated circuit validation, and advanced package interface qualification"
       }
     ]
   },
@@ -1061,64 +950,6 @@
       },
       {
         "sNo": "11",
-        "customerNameCompanyName": "Amkor Technology",
-        "businessOverview": "Global outsourced semiconductor assembly and test provider for advanced packaging, assembly, and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test sockets, wafer sort support, advanced package test, and automotive test",
-        "totalAnnualRevenue": "6710",
-        "customerSizeScale": "Large global outsourced semiconductor assembly and test provider with United States, Korea, Japan, Portugal, Philippines, and Vietnam footprint",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Global Test Engineering or Test Hardware Sourcing",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "amkor.com",
-        "keyBuyingCriteria": "Advanced package socket quality, automotive reliability, and global service",
-        "keyPainPoints": "High mix, customer approvals, and multi site standardization",
-        "upcomingTriggersAndInitiatives": "High complexity; advanced packaging and automotive test drive interface complexity",
-        "budgetOwnership": "Global Test Operations and Supply Chain",
-        "procurementModel": "Program sourcing with customer approved vendor list",
-        "vendorSelectionCriteria": "Multi site support, automotive quality, and quick new product introduction",
-        "preferredEngagementType": "Direct account",
-        "preferredDeploymentModel": "Global framework and site level releases",
-        "preferredSolutionType": "Final test pogo sockets, system level test sockets, and selected probe cards",
-        "integrationTechnicalServiceRequirements": "Handler and automated test equipment compatibility, thermal control, and traceability",
-        "performanceExpectations": "High uptime and first pass yield",
-        "customerBenchmarkingSummary": "Very high priority: large direct outsourced semiconductor assembly and test buyer",
-        "additionalCommentsNotes": "Attractive because Amkor needs repeatable interface hardware for global customer programs",
-        "salesPrioritizationNote": "Prioritize for advanced package test sockets, automotive test sockets, and multi site test hardware standardization"
-      },
-      {
-        "sNo": "12",
-        "customerNameCompanyName": "JCET Group",
-        "businessOverview": "China based outsourced semiconductor assembly and test provider offering integrated circuit packaging and back end manufacturing and test services",
-        "exactCustomerType": "Outsourced Semiconductor Assembly and Test Provider",
-        "waferSortFinalTestUseCase": "Final test, wafer probe, and advanced packaging test for Chinese and global customers",
-        "totalAnnualRevenue": "5400",
-        "customerSizeScale": "Large China led outsourced semiconductor assembly and test provider with global customer base",
-        "keyContactPerson": "xx",
-        "designationRole": "Head of Test Engineering or Back End Procurement",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "jcetglobal.com",
-        "keyBuyingCriteria": "Local supply, high volume socket cost, and quick engineering changes",
-        "keyPainPoints": "Customer ramp volatility, China localization, and package diversity",
-        "upcomingTriggersAndInitiatives": "High trigger from China semiconductor localization and advanced packaging",
-        "budgetOwnership": "Test Operations, Procurement, and Customer Program Management",
-        "procurementModel": "Approved vendor model with program level sourcing",
-        "vendorSelectionCriteria": "Local technical support, capacity, price, and intellectual property control",
-        "preferredEngagementType": "Direct and China service partner",
-        "preferredDeploymentModel": "Local repair and quick turn design",
-        "preferredSolutionType": "Pogo sockets, wafer probe cards, and advanced package sockets",
-        "integrationTechnicalServiceRequirements": "Automated test equipment and handler matching, domestic service, and failure analysis",
-        "performanceExpectations": "High throughput and low socket wear",
-        "customerBenchmarkingSummary": "High priority: China outsourced semiconductor assembly and test aggregator",
-        "additionalCommentsNotes": "Attractive due to domestic ecosystem growth and high socket replacement volume",
-        "salesPrioritizationNote": "Prioritize for China based socket supply, advanced package test, and local repair supported programs"
-      },
-      {
-        "sNo": "13",
         "customerNameCompanyName": "Powertech Technology Inc.",
         "businessOverview": "Taiwan outsourced semiconductor assembly and test provider focused on memory and logic packaging and testing",
         "exactCustomerType": "Memory Focused Outsourced Semiconductor Assembly and Test Provider",
@@ -1147,7 +978,7 @@
         "salesPrioritizationNote": "Prioritize for memory final test sockets, high parallel test consumables, and repair cycle support"
       },
       {
-        "sNo": "14",
+        "sNo": "12",
         "customerNameCompanyName": "King Yuan Electronics Co.",
         "businessOverview": "Taiwan pure play semiconductor testing service provider",
         "exactCustomerType": "Pure Play Semiconductor Test Service Provider",
@@ -1176,7 +1007,7 @@
         "salesPrioritizationNote": "Prioritize as a direct test capacity buyer for wafer probe cards, final test sockets, and fast new product introduction support"
       },
       {
-        "sNo": "15",
+        "sNo": "13",
         "customerNameCompanyName": "ChipMOS Technologies",
         "businessOverview": "Outsourced semiconductor assembly and test provider focused on display driver integrated circuits, memory, mixed signal, and bumping and testing",
         "exactCustomerType": "Display Driver and Memory Outsourced Semiconductor Assembly and Test Provider",
@@ -1205,7 +1036,7 @@
         "salesPrioritizationNote": "Prioritize for display driver wafer probe, fine pitch probe cards, and cost sensitive final test sockets"
       },
       {
-        "sNo": "16",
+        "sNo": "14",
         "customerNameCompanyName": "UTAC Group",
         "businessOverview": "Private outsourced semiconductor assembly and test provider offering assembly and testing from Singapore, Thailand, Indonesia, and China",
         "exactCustomerType": "Automotive and Mixed Signal Outsourced Semiconductor Assembly and Test Provider",
@@ -1234,7 +1065,7 @@
         "salesPrioritizationNote": "Prioritize for automotive test sockets, traceable test hardware, and long lifecycle service contracts"
       },
       {
-        "sNo": "17",
+        "sNo": "15",
         "customerNameCompanyName": "NVIDIA Corporation",
         "businessOverview": "Fabless artificial intelligence graphics processing unit, networking, accelerated computing, and automotive semiconductor company",
         "exactCustomerType": "Fabless Artificial Intelligence Accelerator Demand Owner",
@@ -1263,7 +1094,7 @@
         "salesPrioritizationNote": "Prioritize for artificial intelligence accelerator sockets, system level test sockets, and advanced package test interface specification influence"
       },
       {
-        "sNo": "18",
+        "sNo": "16",
         "customerNameCompanyName": "Advanced Micro Devices",
         "businessOverview": "Fabless central processing unit, graphics processing unit, adaptive computing, and data center semiconductor company",
         "exactCustomerType": "Fabless Central Processing Unit and Graphics Processing Unit Demand Owner",
@@ -1292,7 +1123,7 @@
         "salesPrioritizationNote": "Prioritize for server processor sockets, graphics processor test sockets, chiplet validation sockets, and advanced packaging probe requirements"
       },
       {
-        "sNo": "19",
+        "sNo": "17",
         "customerNameCompanyName": "Qualcomm Incorporated",
         "businessOverview": "Fabless mobile, radio frequency, automotive, Internet of Things, and connectivity semiconductor company",
         "exactCustomerType": "Fabless Mobile and Radio Frequency System on Chip Demand Owner",
@@ -1319,35 +1150,6 @@
         "customerBenchmarkingSummary": "High indirect priority",
         "additionalCommentsNotes": "Attractive because mobile and radio frequency volumes create large downstream socket consumption",
         "salesPrioritizationNote": "Prioritize for radio frequency sockets, mobile chipset final test, automotive connectivity chips, and outsourced semiconductor assembly and test specification influence"
-      },
-      {
-        "sNo": "20",
-        "customerNameCompanyName": "Broadcom Inc.",
-        "businessOverview": "Semiconductor and infrastructure software company with artificial intelligence custom application specific integrated circuits, networking, broadband, wireless, and storage products",
-        "exactCustomerType": "Fabless Networking and Application Specific Integrated Circuit Demand Owner",
-        "waferSortFinalTestUseCase": "Indirect demand through foundry and outsourced semiconductor assembly and test providers for artificial intelligence application specific integrated circuits, networking chips, radio frequency front end products, and storage integrated circuits",
-        "totalAnnualRevenue": "63887",
-        "customerSizeScale": "Large artificial intelligence application specific integrated circuit and networking semiconductor buyer; semiconductor segment revenue of United States Dollars 36,858 million",
-        "keyContactPerson": "xx",
-        "designationRole": "Director for Application Specific Integrated Circuit Test Engineering or Outsourced Semiconductor Assembly and Test Supplier Engineering",
-        "emailAddress": "xx",
-        "phoneWhatsappNumber": "xx",
-        "linkedInProfile": "xx",
-        "websiteUrl": "broadcom.com",
-        "keyBuyingCriteria": "High speed test sockets, radio frequency and millimeter wave capability, and application specific integrated circuit thermal and power handling",
-        "keyPainPoints": "Artificial intelligence accelerator and networking growth, high pin count, and hyperscaler qualification pressure",
-        "upcomingTriggersAndInitiatives": "Very high complexity for artificial intelligence application specific integrated circuits and networking chips; indirect sourcing model",
-        "budgetOwnership": "Application Specific Integrated Circuit Business Unit Test, Outsourced Semiconductor Assembly and Test Management, and Supply Chain",
-        "procurementModel": "Specification influence through foundry and outsourced semiconductor assembly and test providers; customer program approval",
-        "vendorSelectionCriteria": "High speed signal integrity, thermal performance, scale, and outsourced semiconductor assembly and test support",
-        "preferredEngagementType": "Specification influence and strategic account",
-        "preferredDeploymentModel": "Custom interface design and production qualification",
-        "preferredSolutionType": "High speed pogo sockets, system level test sockets, and probe card specification input",
-        "integrationTechnicalServiceRequirements": "112 gigabits per second and 224 gigabits per second signal needs, thermal performance, high current, and advanced package fit",
-        "performanceExpectations": "Stable signal integrity and low downtime",
-        "customerBenchmarkingSummary": "High indirect priority",
-        "additionalCommentsNotes": "Attractive where artificial intelligence application specific integrated circuits and Ethernet switch programs drive high value test interface needs",
-        "salesPrioritizationNote": "Prioritize for artificial intelligence networking chips, high speed switch test sockets, application specific integrated circuit validation, and advanced package interface qualification"
       }
     ]
   }
