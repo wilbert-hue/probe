@@ -189,7 +189,9 @@ export default function CustomerIntelligenceDatabase({ title }: CustomerIntellig
       <div className="mb-6">
         <h2 className="text-xl font-bold text-black mb-2">{title || data.marketTitle}</h2>
         <p className="text-sm text-gray-700">{data.subtitle}</p>
-        <p className="text-xs text-gray-600 mt-1">{data.entityNote}</p>
+        {data.entityNote ? (
+          <p className="text-xs text-gray-600 mt-1">{data.entityNote}</p>
+        ) : null}
       </div>
 
       {propositions.map(({ key, proposition }) => (

@@ -1,49 +1,117 @@
 {
   "Global": {
-    "By Reinforcement Material Type": {
-      "Glass Fiber Reinforced Polymer Poles": {},
-      "Hybrid Fiber Reinforced Polymer Poles": {},
-      "Other Advanced Composite Poles (Carbon Fiber, Basalt Fiber, Aramid Fiber, etc.)": {}
+    "By Excitation Method": {
+      "RF-Excited CO₂ Lasers": {},
+      "DC-Excited CO₂ Lasers": {}
     },
-    "By Structure Configuration": {
-      "Single-Pole Structures": {},
-      "H-Frame Structures": {},
-      "Multi-Pole Portal Structures": {}
+    "By Gas Flow & Cooling Technology": {
+      "Sealed-Off / Diffusion-Cooled": {},
+      "Fast Axial Flow": {},
+      "TEA (Transverse Excited Atmosphere)": {}
     },
-    "By Support Method": {
-      "Self-Supporting Pole Structures": {},
-      "Guyed Pole Structures": {}
+    "By Power Range": {
+      "Up to 300 W": {},
+      "Above 300 W to 500 W": {},
+      "Above 500 W to 1 kW": {},
+      "Above 1 kW to 2 kW": {},
+      "Above 2 kW to 5 kW": {},
+      "Above 5 kW": {}
     },
-    "By Pole Line Function": {
-      "Tangent Utility Poles": {},
-      "Angle Utility Poles": {},
-      "Dead-End and Anchor Utility Poles": {},
-      "Terminal and Take-Off Utility Poles": {}
+    "By Deployment": {
+      "Standalone / Benchtop Systems": {},
+      "Production Line Integrated Systems": {},
+      "Robotic Integrated Systems": {},
+      "Gantry / Portal Systems": {}
     },
-    "By High-Voltage Transmission Poles": {
-      "69 kV to 230 kV": {},
-      "Above 230 kV": {}
+    "By Materials Processed": {
+      "Paper and Labels": {},
+      "Cardboard and Corrugated Board": {},
+      "Plastics and Polymers": {},
+      "Rubber and Foam": {},
+      "Textiles and Fabrics": {},
+      "Leather": {},
+      "Wood and Wood Derivatives": {},
+      "Metals": {},
+      "Ceramics": {},
+      "Others (Composite Materials, Glass, etc.)": {}
     },
-    "By Installation Type": {
-      "New Transmission Line Construction": {},
-      "Transmission Pole Replacement and Retrofit": {}
+    "By Industry Vertical": {
+      "Packaging and Converting": {},
+      "Printing and Graphics": {},
+      "Food and Beverage": {},
+      "Plastics and Polymer Manufacturing": {},
+      "Textile and Apparel": {},
+      "Leather and Footwear Manufacturing": {},
+      "Automotive and Transportation": {},
+      "Electronics and Semiconductor": {},
+      "Furniture and Wood Products Manufacturing": {},
+      "Building and Construction": {},
+      "Consumer Goods": {},
+      "Others (Energy and Utilities, etc.)": {}
     },
-    "By Operating Environment": {
-      "Normal Inland Transmission Corridors": {},
-      "Coastal and Corrosion-Prone Transmission Corridors": {},
-      "High-Wind and Storm-Prone Transmission Corridors": {},
-      "Wildfire-Prone Transmission Corridors": {},
-      "Remote and Difficult-Terrain Transmission Corridors": {}
-    },
-    "By Customer Type": {
-      "Transmission System Operators and Transmission Utilities": {},
-      "Distribution Network Operators": {},
-      "EPC and Grid Infrastructure Contractors": {},
-      "Industrial Power Network Owners": {},
-      "Government and Public Transmission Agencies": {}
+    "By Application": {
+      "Material Removal Applications": {
+        "Laser Cutting": {},
+        "Laser Engraving": {},
+        "Laser Drilling": {},
+        "Laser Micro-Perforation": {},
+        "Laser Ablation": {},
+        "Laser Kiss-Cutting": {}
+      },
+      "Surface Treatment Applications": {
+        "Cleaning/Stripping": {},
+        "Hardening": {},
+        "Texturing": {}
+      },
+      "Joining Applications": {
+        "Welding": {},
+        "Sealing / Bonding": {}
+      },
+      "Identification & Traceability": {
+        "Laser Marking": {},
+        "Laser Coding": {}
+      },
+      "Converting Applications": {
+        "Label Converting": {},
+        "Paper Converting": {},
+        "Film Converting": {},
+        "Packaging Converting": {}
+      }
     },
     "By Region": {
-      "UK": {}
+      "North America": {
+        "U.S.": {},
+        "Canada": {}
+      },
+      "Europe": {
+        "U.K.": {},
+        "Germany": {},
+        "France": {},
+        "Italy": {},
+        "Spain": {},
+        "Russia": {},
+        "Rest of Europe": {}
+      },
+      "Asia Pacific": {
+        "China": {},
+        "India": {},
+        "Japan": {},
+        "South Korea": {},
+        "ASEAN": {},
+        "Australia": {},
+        "Rest of Asia Pacific": {}
+      },
+      "Middle East & Africa": {
+        "GCC": {},
+        "South Africa": {},
+        "Rest of Middle East & Africa": {}
+      },
+      "Latin America": {
+        "Brazil": {},
+        "Argentina": {},
+        "Mexico": {},
+        "Rest of Latin America": {}
+      }
     }
   }
 }

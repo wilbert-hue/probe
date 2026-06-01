@@ -1472,7 +1472,7 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'Composite Utility Transmission Pole Market',
+      market_name: 'Industrial CO₂ Laser Market Market',
       market_type: 'Market Analysis',
       industry: 'Healthcare & Pharmaceuticals',
       years: allYears,
@@ -1483,7 +1483,7 @@ export async function processJsonDataAsync(
       forecast_years: allYears.filter(y => y > historicalEndYear),
       currency: 'USD',
       value_unit: 'Million',
-      volume_unit: 'Million Units',
+      volume_unit: 'Units',
       has_value: valueRecords.length > 0,
       has_volume: volumeRecords.length > 0,
     }

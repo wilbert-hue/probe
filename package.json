@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-data": "node generate_co2_data.js",
+    "generate-customer-intelligence": "node convert_customer_intelligence.js"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.2.6",
